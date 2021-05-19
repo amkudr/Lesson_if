@@ -2,16 +2,16 @@ age = int(input("Введите ваш возраст "))
 def selection(age):
     if age < 0:
         raise ValueError("Введите корректный возраст")
-    if age <= 0 and age < 7:
+    if age < 7:
         return("Вы в детском саду")
-    if age >= 7 and age <= 18:
+    if age < 19:
         return("Вы в школе")
-    if age >= 18 and age <= 24:
+    if age < 24:
         return("Вы в ВУЗе")
-    if age >24 and age <=65:
+    if age <66:
         return("Вы работаете")
     else:
-        return("Вы скорее всего умерли")
+        return("Вы на пенсии или умерли")
 escape = selection(age)
 print(escape)
 
